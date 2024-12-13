@@ -14,6 +14,8 @@ function makeCalculator() {
     operate(callback, number) {
       if (typeof callback === `function`) {
         result = callback(result, number);
+      } else {
+        return NaN;
       }
 
       return this;
@@ -42,7 +44,7 @@ function makeCalculator() {
         return a / b;
       }
 
-      return 'false';
+      return NaN;
     },
   };
 }
